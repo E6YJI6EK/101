@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/", // куда происходит сборка, но в нашем случае это делает вебпак
+        "noImplicitAny": true, // разработчик обязательно должен явно писать тип any у той или иной переменной 
+        "module": "ESNext", // способ модульной сборки
+        "target": "es5", // версия стандарта ES, поддержвиваемого большинством браузеров
+        "jsx": "react", // позволяет писать jsx и tsx
+        "allowJs": true, // компиялтор будет обрабатывать не только ts файлы, но  js 
+        "moduleResolution": "node",
+        // esModuleInterop позволяет работать с пакетами, которые
+        // используют common js как с обычными пакетами с помощью import (require() module.export) = common js
+        "esModuleInterop": true,
+        // позволяет работать дефолтным импортам и экспортам
+        "allowSyntheticDefaultImports": true,
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}
