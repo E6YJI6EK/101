@@ -3,13 +3,16 @@ import webpack from "webpack";
 import { buildLoaders } from "./buildLoaders";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
+import { buildDevServer } from "./buildDevServer";
 
-export function buildWebpackConfig(options:BuildOptions): webpack.Configuration {
-    const {paths, mode} = options;
+export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
+    const { paths, mode, isDev } = options;
 
     return {
-        mode: mode, // мод билда
-        entry: paths.entry, // универсальный способ задавания путей к файлу
+        // мод билда
+        mode: mode,
+        // точка(и) входа
+        entry: paths.entry,
         // подключаем typescript
         module: {
             // обработчики файлов, выходящих за пределы js, например: ts, jpg, css, scss и т.д.
@@ -27,5 +30,9 @@ export function buildWebpackConfig(options:BuildOptions): webpack.Configuration 
         },
         // плагины вебпака
         plugins: buildPlugins(options),
+        // делает сурс-мапы: всегда можно отследить в каком именно файле возникла ошибка
+        devtool: isDev ? "inline-source-map" : undefined,
+        // запускает сервер, как в реакте
+        devServer: isDev ? buildDevServer(options): undefined,
     }
 }
