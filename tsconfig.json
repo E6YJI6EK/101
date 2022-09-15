@@ -12,6 +12,8 @@
         "esModuleInterop": true,
         // позволяет работать дефолтным импортам и экспортам
         "allowSyntheticDefaultImports": true,
+        // Для абсолютного импорта
+        "baseUrl": "."
     },
     "ts-node": {
         "compilerOptions": {
