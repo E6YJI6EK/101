@@ -16,7 +16,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         // подключаем typescript
         module: {
             // обработчики файлов, выходящих за пределы js, например: ts, jpg, css, scss и т.д.
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         // указываем расширения, 
         // которые можно не указывать при импорте тех или иных файлов 

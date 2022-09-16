@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import React, { FC } from 'react';
-import '../styles/Counter.scss';
+import { useState, FC } from 'react';
+import classes from '../styles/Counter.module.scss';
 
 
 const Counter:FC = () => {
@@ -8,8 +7,8 @@ const Counter:FC = () => {
     return (
         <div>
             <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>Inc</button>
-            <button onClick={() => setCount(count - 1)}>Dec</button>
+            <button onClick={() => setCount(count + 1)} className={classes.btn}>Inc</button>
+            <button onClick={() => setCount(count - 1)} className={classes.btn}>Dec</button>
         </div>
     );
 }
