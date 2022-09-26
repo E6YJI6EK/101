@@ -21,7 +21,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         // указываем расширения, 
         // которые можно не указывать при импорте тех или иных файлов 
         // "import Component from 'src/Component"
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         // выходные данные на билде
         output: {
             filename: '[name][contenthash].js', // название главного js-файла в билде
