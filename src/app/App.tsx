@@ -1,6 +1,6 @@
 import { FC, Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { classNames } from 'helpers/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import { useTheme } from './providers/ThemeProvider';
