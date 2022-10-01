@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from './providers/ThemeProvider';
 import './styles/index.scss';
 import { AppRouter } from './providers/router';
+import { Navbar } from 'widgets/Navbar';
 
 
 
@@ -13,9 +14,9 @@ const App: FC = () => {
 
     return (
         <div className={classNames('App', { hovered: true, selected: false }, [theme])}>
+            <Navbar/>
             <button onClick={toggleTheme}>Change theme</button>
-            <Link to={"/"}>Main</Link>
-            <Link to={"/about"}>About</Link>
+            
             <AppRouter/>
         </div>
 
