@@ -34,5 +34,6 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         devtool: isDev ? "inline-source-map" : undefined,
         // запускает сервер, как в реакте
         devServer: isDev ? buildDevServer(options): undefined,
+        cache: false
     }
 }
