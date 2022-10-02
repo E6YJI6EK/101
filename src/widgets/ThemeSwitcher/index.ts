@@ -1,5 +1,5 @@
 import { ThemeSwitcher } from "./ui/ThemeSwitcher";
 
-export  {
+export {
     ThemeSwitcher
 }
