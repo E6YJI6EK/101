@@ -3,14 +3,13 @@
 }
 
 .primary {
-    color: var(--inverted-primary-color);
+    color: var(--primary-color);
 }
 
 .secondary {
-color: var(--inverted-secondary-color);
+    color: var(--inverted-primary-color);
 }
 
-.non-underline {
-    text-decoration: none;
+.red {
     color: red;
 }

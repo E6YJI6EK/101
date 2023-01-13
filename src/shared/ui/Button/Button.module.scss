@@ -10,17 +10,9 @@
     outline: none;
 }
 
-.outlined {
-    padding: 5px 10px;
-    border-radius: 5px;
+.outline {
+    padding: 10px 15px;
+    border: 1px solid vat(--primary-color);
+    color: var(--primary-color);
     background: transparent;
-    border: 1px solid var(--inverted-bg-color);
-}
-
-.outlined_inverted {
-    padding: 5px 10px;
-    border-radius: 5px;
-    background: transparent;
-    border: 1px solid var(--bg-color);
-    color: var(--inverted-primary-color);
 }

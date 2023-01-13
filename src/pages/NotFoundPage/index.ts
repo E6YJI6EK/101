@@ -1,2 +1,5 @@
-export {NotFoundPageAsync as NotFoundPage} from './ui/NotFoundPage.async';
+import { NotFoundPage } from './ui/NotFoundPage';
 
+export {
+    NotFoundPage,
+};
